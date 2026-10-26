@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5S7SNMP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meta Conversions API (CAPI) on Shopify: Setup Guide & Checklist | Ali Raza</title>
+<meta name="description" content="Step-by-step guide to setting up the Meta Conversions API on Shopify: connecting the Facebook & Instagram app, data sharing settings, deduplication and event match quality.">
+<link rel="canonical" href="https://ali-raza-ppc.github.io/blog/meta-conversions-api-shopify/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ali-raza-ppc.github.io/blog/meta-conversions-api-shopify/">
+<meta property="og:title" content="Meta Conversions API (CAPI) on Shopify: Setup Guide & Checklist | Ali Raza">
+<meta property="og:description" content="Step-by-step guide to setting up the Meta Conversions API on Shopify: connecting the Facebook & Instagram app, data sharing settings, deduplication and event match quality.">
+<meta property="og:image" content="https://ali-raza-ppc.github.io/ali-raza.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/ali-raza.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.article{max-width:740px;margin:0 auto}
+.article h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.025em;margin-top:14px}
+.article .meta{display:flex;align-items:center;gap:12px;margin-top:22px;color:var(--muted);font-size:.92rem}
+.article .meta img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--accent)}
+.article .meta b{color:var(--ink);display:block}
+.body{font-size:1.08rem;line-height:1.75;color:var(--ink)}
+.body p,.body ul,.body ol{margin:0 0 18px}
+.body h2{font-size:clamp(1.45rem,2.6vw,1.9rem);margin:44px 0 14px}
+.body h3{font-size:1.2rem;margin:28px 0 10px}
+.body ul,.body ol{padding-left:22px}
+.body li{margin-bottom:8px}
+.body .tldr{background:var(--accent-soft);border-radius:14px;padding:20px 22px;margin:28px 0}
+.body .tldr p{margin:0}
+.body .tldr ul{margin:10px 0 0}
+.body table{width:100%;border-collapse:collapse;margin:0 0 22px;font-size:.95rem}
+.body th,.body td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.body th{background:var(--band)}
+.cta-box{background:var(--ink);color:var(--bg);border-radius:18px;padding:28px;margin:44px 0 0}
+.cta-box h2{color:var(--bg);margin:0 0 10px;font-size:1.6rem}
+.cta-box p{color:color-mix(in srgb,var(--bg) 78%,var(--ink));margin:0 0 18px}
+.posts{display:grid;gap:18px;max-width:820px}
+.post{display:block;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;text-decoration:none;color:var(--ink)}
+.post:hover{border-color:var(--accent)}
+.post p{color:var(--muted);margin-top:8px}
+.post small{font:500 .78rem var(--mono);color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to Set Up the Meta Conversions API on Shopify", "description": "Step-by-step guide to setting up the Meta Conversions API on Shopify: connecting the Facebook & Instagram app, data sharing settings, deduplication and event match quality.", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "author": {"@type": "Person", "name": "Ali Raza", "url": "https://ali-raza-ppc.github.io/", "jobTitle": "Performance Marketing Specialist", "sameAs": ["https://www.linkedin.com/in/ali-raza-ads-manager/", "https://github.com/ali-raza-ppc"]}, "publisher": {"@type": "Person", "name": "Ali Raza", "url": "https://ali-raza-ppc.github.io/", "jobTitle": "Performance Marketing Specialist", "sameAs": ["https://www.linkedin.com/in/ali-raza-ads-manager/", "https://github.com/ali-raza-ppc"]}, "mainEntityOfPage": "https://ali-raza-ppc.github.io/blog/meta-conversions-api-shopify/", "image": "https://ali-raza-ppc.github.io/ali-raza.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ali-raza-ppc.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ali-raza-ppc.github.io/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Set Up the Meta Conversions API on Shopify", "item": "https://ali-raza-ppc.github.io/blog/meta-conversions-api-shopify/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need the Conversions API if I already have the Meta Pixel?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for most stores. The Pixel alone misses some events because of browser privacy features and ad blockers. The Conversions API sends events from the server so Meta receives more complete data."}}, {"@type": "Question", "name": "Does Shopify support the Meta Conversions API?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Shopify's official Facebook & Instagram app can send server-side events through the Conversions API when you choose a higher customer data-sharing level."}}, {"@type": "Question", "name": "What is event deduplication?", "acceptedAnswer": {"@type": "Answer", "text": "When the same event is sent by both the Pixel and the Conversions API, Meta uses a shared event ID to recognise the duplicate and keep only one, so purchases are not double-counted."}}]}</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5S7SNMP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+  <div class="wrap">
+    <a class="logo" href="/">Ali Raza<span>.</span></a>
+    <nav aria-label="Site">
+      <a href="/#about">About</a>
+      <a href="/#results">Results</a>
+      <a href="/#services">Services</a>
+      <a href="/blog/">Blog</a>
+      <a class="cta" href="https://wa.me/923045998268?text=Hi%20Ali%2C%20I%20saw%20your%20portfolio%20and%20want%20a%20free%20ad%20audit." target="_blank" rel="noopener">Free audit</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" style="padding-bottom:24px">
+    <div class="wrap"><div class="article">
+      <p class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Tracking</p>
+      <p class="eyebrow">Tracking</p>
+      <h1>How to Set Up the Meta Conversions API on Shopify</h1>
+      <div class="meta"><img src="/ali-raza.jpg" alt="Ali Raza" width="44" height="44"><div><b>Ali Raza</b>Performance Marketing Specialist · 3 min read · Oct 2026</div></div>
+    </div></div>
+  </section>
+  <section style="padding-top:8px">
+    <div class="wrap"><article class="article body">
+
+<p>If your Meta ads only rely on the browser Pixel, you are probably missing a share of your purchases. Ad blockers, browser privacy features and iOS tracking limits all stop some Pixel events from reaching Meta. The <b>Conversions API (CAPI)</b> fixes much of this by sending events from the server as well as the browser.</p>
+<p>This guide covers how CAPI works on Shopify, how to set it up with Shopify's official Meta integration, and how to check that it is working.</p>
+<div class="tldr"><p><b>Quick summary</b></p><ul><li>On Shopify, the simplest route is the official Facebook &amp; Instagram (Meta) sales channel app.</li><li>Choose the highest customer data-sharing level your privacy policy allows.</li><li>Verify in Events Manager: server and browser events received, deduplicated, with good match quality.</li></ul></div>
+
+<h2>What the Conversions API does</h2>
+<p>The Pixel sends events (like ViewContent, AddToCart and Purchase) from the shopper's browser. The Conversions API sends the same events directly from a server. When both are set up, Meta receives each event twice and <b>deduplicates</b> them using a shared event ID, keeping one copy.</p>
+<p>The result is more complete conversion data, which helps both reporting and Meta's ad delivery, because the algorithm optimises on the conversions it can see.</p>
+
+<h2>Option 1: Shopify's Facebook &amp; Instagram app (recommended for most stores)</h2>
+<ol>
+<li>In Shopify admin, install or open the <b>Facebook &amp; Instagram</b> sales channel (published by Meta).</li>
+<li>Connect your Facebook account, Business Manager, Page, ad account and Pixel (dataset).</li>
+<li>In the app's data-sharing settings, choose the highest customer data-sharing level that fits your privacy policy. Higher levels turn on server-side events through the Conversions API.</li>
+<li>Remove any old Pixel code you added manually to the theme, to avoid duplicate events that aren't deduplicated.</li>
+<li>Place a test order or use Meta's <b>Test Events</b> tool to confirm events arrive.</li>
+</ol>
+<p>Menu names change from time to time, but the principle stays the same: one connection, with server-side sharing switched on.</p>
+
+<h2>Option 2: Server-side tagging or a third-party app</h2>
+<p>Larger brands sometimes use server-side Google Tag Manager or a dedicated tracking app instead. This gives more control (for example, sending custom events or enriching data), but it takes more work to set up and maintain. For most stores, the official integration is enough.</p>
+
+<h2>How to check that CAPI is working</h2>
+<p>Open <b>Events Manager</b>, select your Pixel/dataset, and look at the Purchase event:</p>
+<ul>
+<li><b>Connection method:</b> it should show events received from both browser and server.</li>
+<li><b>Deduplication:</b> Meta shows whether browser and server events are being matched. Poor deduplication means purchases may be double-counted.</li>
+<li><b>Event match quality (EMQ):</b> a score showing how well customer information (like hashed email and phone) helps match events to Meta accounts. Higher is better.</li>
+<li><b>Diagnostics:</b> fix any warnings Meta lists, such as missing parameters or duplicate events.</li>
+</ul>
+<p>Finally, compare Purchases in Ads Manager with orders in Shopify over a full week. They will never match exactly (attribution works differently), but big unexplained gaps mean something is still wrong.</p>
+
+<h2>Common mistakes</h2>
+<table><tr><th>Mistake</th><th>What happens</th><th>Fix</th></tr>
+<tr><td>Pixel added twice (theme + app)</td><td>Inflated or messy event counts</td><td>Keep one browser source only</td></tr>
+<tr><td>Low data-sharing level</td><td>No server events, lower match quality</td><td>Raise sharing level within your privacy policy</td></tr>
+<tr><td>Wrong Pixel connected</td><td>Events go to an unused dataset</td><td>Check the Pixel ID used by your ad account</td></tr>
+<tr><td>Not testing after theme changes</td><td>Tracking silently breaks</td><td>Re-test events after every major site change</td></tr></table>
+
+<h2>Does CAPI improve ROAS?</h2>
+<p>CAPI doesn't make your ads better by itself. What it does is give Meta more accurate conversion data, so reporting is closer to reality and the algorithm has better signals to optimise on. In my experience, fixing tracking is often the first step when an account's performance has dropped. See my guide on <a href="/blog/meta-ads-roas-dropping/">why Meta ads ROAS drops</a>.</p>
+
+<h2>Want it checked for you?</h2>
+<p>I set up and audit Pixel and Conversions API tracking for Shopify brands as part of my <a href="/meta-ads-expert-for-shopify/">Meta ads service</a>. Message me for a free 15-minute audit.</p>
+
+      <h2>Frequently asked questions</h2>
+      <h3>Do I need the Conversions API if I already have the Meta Pixel?</h3><p>Yes, for most stores. The Pixel alone misses some events because of browser privacy features and ad blockers. The Conversions API sends events from the server so Meta receives more complete data.</p><h3>Does Shopify support the Meta Conversions API?</h3><p>Yes. Shopify's official Facebook & Instagram app can send server-side events through the Conversions API when you choose a higher customer data-sharing level.</p><h3>What is event deduplication?</h3><p>When the same event is sent by both the Pixel and the Conversions API, Meta uses a shared event ID to recognise the duplicate and keep only one, so purchases are not double-counted.</p>
+      <div class="cta-box"><h2>Get a free 15-minute ad audit</h2><p>I'm Ali Raza, a performance marketer with 6+ years and $10M+ in Meta, Google and TikTok ad spend managed. I'll review your account and show you the biggest opportunities.</p>
+      <div class="actions" style="margin-top:0"><a class="btn primary" href="https://wa.me/923045998268?text=Hi%20Ali%2C%20I%20saw%20your%20portfolio%20and%20want%20a%20free%20ad%20audit." target="_blank" rel="noopener">Message me on WhatsApp</a><a class="btn" href="/meta-ads-expert-for-shopify/" style="background:transparent;color:inherit">Meta ads & tracking setup for Shopify stores</a></div></div>
+    </article></div>
+  </section>
+  <section class="band">
+    <div class="wrap"><div class="head"><p class="eyebrow">Keep reading</p><h2>More guides</h2></div><div class="posts"><a class="post" href="/blog/meta-ads-roas-dropping/"><small>Meta Ads</small><h3>Why Your Meta Ads ROAS Is Dropping (and 9 Ways to Fix It)</h3></a><a class="post" href="/blog/facebook-lead-ads-quality/"><small>Lead generation</small><h3>How to Get Better Quality Leads From Facebook Lead Ads</h3></a></div></div>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 Ali Raza · Performance Marketing · <a href="/" style="color:inherit">Portfolio</a> · <a href="/blog/" style="color:inherit">Blog</a> · <a href="/meta-ads-expert-for-shopify/" style="color:inherit">Meta ads for Shopify</a> · <a href="/google-ads-lead-generation/" style="color:inherit">Lead generation</a></div></footer>
+<a class="wa-float" href="https://wa.me/923045998268?text=Hi%20Ali%2C%20I%20saw%20your%20portfolio%20and%20want%20a%20free%20ad%20audit." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.5L3 29l6.7-1.7c1.9 1 4 1.6 6.3 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-4 1 1.1-3.9-.3-.4C5.6 19.9 5.1 18 5.1 16 5.1 10 10 5.2 16 5.2S26.9 10 26.9 16 22 26.7 16 26.7zm6-8.1c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
+</body>
+</html>
