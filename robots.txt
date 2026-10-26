@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ali-raza-ppc.github.io/sitemap.xml
