@@ -209,6 +209,22 @@ footer .wrap{padding-block:24px;border-top:1px solid color-mix(in srgb,var(--bg)
 <script>
 document.addEventListener('click',function(e){var b=e.target.closest('.intro-video .yt');if(!b||b.querySelector('iframe'))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';f.title='Meta Ads Manager Walkthrough: Multiple Ad Accounts &amp; Their Status';f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;b.appendChild(f);if(window.dataLayer)dataLayer.push({event:'intro_video_play'});});
 </script>
+<style>
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:880px}
+.plan{position:relative;display:grid;gap:18px;align-content:start;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
+.plan.pro{border:2px solid var(--accent)}
+.plan .badge{position:absolute;top:-12px;right:24px;background:var(--accent);color:var(--accent-ink);font:500 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.plan .price{font:800 clamp(2.4rem,5vw,3.2rem)/1 var(--display);letter-spacing:-.02em}
+.plan .price small{font:500 1rem var(--body);color:var(--muted);letter-spacing:0}
+.plan .for{color:var(--muted);font-size:.95rem}
+.plan .plats{display:flex;flex-wrap:wrap;gap:8px}
+.plan ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;border-top:1px solid var(--line);padding-top:18px}
+.plan li{display:flex;gap:10px;font-size:.95rem}
+.plan li::before{content:"\2713";color:var(--good);font-weight:700}
+.plan .btn{justify-content:center;margin-top:4px}
+@media (max-width:720px){.plans{grid-template-columns:1fr}}
+#pricing+#experience{border-top:1px solid var(--line)}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -223,6 +239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#results">Results</a>
       <a href="#experience">Experience</a>
       <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
       <a href="#process">How I work</a>
       <a href="#certifications">Certifications</a>
       <a href="/blog/">Blog</a>
@@ -360,6 +377,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a class="svc" href="/tiktok-ads-freelancer/"><h3>TikTok ads for e-commerce</h3><p>Campaign set-up, creative testing, Spark Ads and scaling.</p><span>Learn more →</span></a>
         <a class="svc" href="/google-ads-lead-generation/"><h3>Google &amp; Meta lead generation</h3><p>Lower cost per lead, better lead quality, CRM and Sheets automation.</p><span>Learn more →</span></a>
         <a class="svc" href="/hire-remote-ppc-specialist/"><h3>Hire a remote PPC specialist</h3><p>Senior media buyer on US hours, freelance or full-time remote.</p><span>Learn more →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="band">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Pricing</p><h2>Simple monthly plans</h2><p class="lede">Flat monthly management fee. Ad spend is paid directly to the platforms and is not included. No long-term contract.</p></div>
+      <div class="plans">
+        <article class="plan">
+          <div><h3>Basic</h3><p class="for" style="margin-top:6px">For brands growing on social.</p></div>
+          <p class="price">$300<small> / month</small></p>
+          <div class="plats"><span class="chip">Meta Ads</span><span class="chip">TikTok Ads</span></div>
+          <ul>
+            <li>Facebook, Instagram &amp; TikTok campaign set-up and management</li>
+            <li>Pixel, Conversions API &amp; TikTok Pixel tracking</li>
+            <li>Audience and creative testing</li>
+            <li>Retargeting &amp; catalogue / DPA campaigns</li>
+            <li>Weekly performance report</li>
+          </ul>
+          <a class="btn" href="https://wa.me/923045998268?text=Hi%20Ali%2C%20I%27m%20interested%20in%20the%20Basic%20plan%20%28Meta%20%2B%20TikTok%29." target="_blank" rel="noopener">Choose Basic</a>
+        </article>
+        <article class="plan pro">
+          <span class="badge">Most complete</span>
+          <div><h3>Advance</h3><p class="for" style="margin-top:6px">Full-funnel growth across social and search.</p></div>
+          <p class="price">$500<small> / month</small></p>
+          <div class="plats"><span class="chip">Meta Ads</span><span class="chip">TikTok Ads</span><span class="chip">Google Ads</span></div>
+          <ul>
+            <li>Everything in Basic</li>
+            <li>Google Search, Performance Max &amp; Shopping campaigns</li>
+            <li>GA4 &amp; Google Tag Manager conversion tracking</li>
+            <li>Cross-channel budget allocation by ROAS / CPL</li>
+            <li>Weekly report + monthly strategy call</li>
+          </ul>
+          <a class="btn primary" href="https://wa.me/923045998268?text=Hi%20Ali%2C%20I%27m%20interested%20in%20the%20Advance%20plan%20%28Meta%20%2B%20TikTok%20%2B%20Google%29." target="_blank" rel="noopener">Choose Advance</a>
+        </article>
       </div>
     </div>
   </section>
