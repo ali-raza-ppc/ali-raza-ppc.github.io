@@ -100,7 +100,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>On <b>28 October 2026</b>, Meta announced a next-generation retrieval system. Based on Meta's engineering announcement and coverage of it, the main changes are:</p>
 <table>
 <tr><th>Area</th><th>Original Andromeda (2024)</th><th>Andromeda 2.0 (2026)</th></tr>
-<tr><td>Scale</td><td>Grouped and skipped many ads to stay fast</td><td>Over a billion ads evaluated per second, roughly 100× the 2024 capacity</td></tr>
+<tr><td><a href="/blog/scale-facebook-ads-without-killing-roas/">Scale</a></td><td>Grouped and skipped many ads to stay fast</td><td>Over a billion ads evaluated per second, roughly 100× the 2024 capacity</td></tr>
 <tr><td>Model design</td><td>One main model of the user</td><td>Mixture of experts: specialised models for different interest areas</td></tr>
 <tr><td>Understanding ads</td><td>Mostly from performance signals</td><td>New <b>GenRecs</b> model reads ad text and images to understand what the ad is about</td></tr>
 <tr><td>Ranking partner</td><td>GEM model</td><td>Larger GEM model using more user history</td></tr>
@@ -109,13 +109,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <h2>What this means for advertisers</h2>
 <h3>1. Creative is now your targeting</h3>
-<p>With models that understand what an ad says and shows, the ad itself tells Meta who it's for. A creative about joint pain for runners will find a different audience than one about gifting for new parents, even with identical broad targeting. That's why "creative diversity" is the phrase you'll see attached to Andromeda everywhere.</p>
+<p>With models that understand what an ad says and shows, the ad itself tells Meta who it's for. A creative about joint pain for runners will find a different audience than one about gifting for new parents, even with identical <a href="/blog/broad-vs-interest-targeting-meta/">broad targeting</a>. That's why "creative diversity" is the phrase you'll see attached to Andromeda everywhere.</p>
 <h3>2. Concepts beat variations</h3>
-<p>If ten ads use the same face, the same hook and the same message with small tweaks, the system effectively sees one idea. Meaningfully different concepts give retrieval more ways to match your product with different people. Think in terms of:</p>
+<p>If ten ads use the same face, the same <a href="/blog/facebook-ad-hooks-dtc/">hook</a> and the same message with small tweaks, the system effectively sees one idea. Meaningfully different concepts give retrieval more ways to match your product with different people. Think in terms of:</p>
 <ul>
 <li><b>Angle:</b> problem-solution, social proof, comparison, founder story, offer</li>
 <li><b>Persona:</b> who the ad speaks to and who appears in it</li>
-<li><b>Format:</b> UGC video, static, carousel, demo, before/after</li>
+<li><b>Format:</b> <a href="/blog/ugc-ads-shopify-creator-brief/">UGC</a> video, static, carousel, demo, before/after</li>
 <li><b>Moment:</b> when and why someone would use the product</li>
 </ul>
 <h3>3. Fragmented structures fight the system</h3>
@@ -129,7 +129,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><b>Fill the gaps.</b> Brief new concepts for angles, personas and formats you're missing.</li>
 <li><b>Make the idea obvious early.</b> Put the core message in the first frame and first line so the system and the viewer both understand it.</li>
 <li><b>Consolidate.</b> Fewer campaigns and ad sets, broad or Advantage+ audiences, unless you have a clear reason to split.</li>
-<li><b>Test concepts properly.</b> Give each new concept enough budget and time before judging it. My <a href="/blog/meta-ad-creative-testing-framework/">creative testing framework</a> shows how.</li>
+<li><b>Test concepts properly.</b> Give each new concept enough <a href="/blog/shopify-facebook-ads-budget/">budget</a> and time before judging it. My <a href="/blog/meta-ad-creative-testing-framework/">creative testing framework</a> shows how.</li>
 <li><b>Track spend by concept.</b> If one concept takes most of the budget, you're exposed when it fatigues.</li>
 <li><b>Keep tracking clean.</b> Pixel plus <a href="/blog/meta-conversions-api-shopify/">Conversions API</a> with good event match quality. Better signals mean better learning.</li>
 </ol>
@@ -146,6 +146,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li>Ignoring offer, landing page and tracking problems</li>
 </ul>
 <p class="note" style="font-size:.9rem;color:var(--muted)">Sources: Meta Engineering announcements on Andromeda (December 2024) and its next-generation retrieval system (October 2026), plus industry coverage of the update. Performance figures are as reported by Meta.</p>
+
+<div class="tldr related-guides"><p><b>Related guides</b></p><ul><li><a href="/blog/meta-ads-account-structure-shopify/">Meta Ads Account Structure for Shopify Stores in 2026</a></li><li><a href="/blog/cbo-vs-abo-meta-ads/">CBO vs ABO: When to Use Each on Meta Ads</a></li><li><a href="/blog/broad-vs-interest-targeting-meta/">Broad Targeting vs Interest Targeting on Meta in 2026</a></li><li><a href="/blog/meta-ads-learning-phase/">Meta Ads Learning Phase: How to Exit It Faster</a></li><li><a href="/blog/advantage-plus-shopping-campaigns-setup/">Advantage+ Shopping Campaigns: Setup Guide for Shopify Brands</a></li></ul></div>
 
       <h2>Frequently asked questions</h2>
       <h3>What is the Meta Andromeda update?</h3><p>Andromeda is Meta's ad retrieval system, the first stage of ad delivery that picks a shortlist of ads that could be shown to each person. Meta introduced it in December 2024 and announced a next-generation version, often called Andromeda 2.0, on 28 October 2026.</p><h3>What changed in Meta Andromeda 2.0?</h3><p>According to Meta's engineering announcement, the new version can evaluate over a billion ads per second, about 100 times the 2024 system, uses a mixture-of-experts design with specialised models for different interest areas, and works alongside a new GenRecs model that understands ad content and a larger GEM ranking model.</p><h3>Do I need to change anything in my campaigns for Andromeda?</h3><p>Meta says there is nothing to switch on. But because retrieval now relies more on what your ads say and show, accounts with genuinely different creative concepts, simple campaign structures and broad targeting are best placed to benefit.</p><h3>How many ads should I run per ad set after Andromeda?</h3><p>Meta has not published a recommended number. Focus on the number of distinct concepts rather than ad count. Ten small variations of one idea are treated much like one ad, while four clearly different angles give the system more to work with.</p>
